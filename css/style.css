@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    background: rgba(146, 158, 158, 0.333);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.75rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 22px;
+}
+
+#btn {
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
