@@ -1,3 +1,4 @@
+/* para responsividade trocar px por % ou rem */
 * {
     padding: 0;
     margin: 0;
@@ -6,7 +7,7 @@
 
 body {
     font-size: 20px;
-    background: rgba(146, 158, 158, 0.333);
+    background: rgba(158, 152, 240, 0.333);
 }
 
 .formulario {
@@ -16,15 +17,42 @@ body {
     align-items: center;
     gap: 1rem;
     margin: 0.75rem;
+    float: left;
+}
+
+.uls {
+    display: flex;
+    width: 49%;
+}
+
+.forms {
+    width: 49%;
 }
 
 h1 {
     text-align: center;
-    font-size: 22px;
+    font-size: 35px;
+    padding: 10px;
+    color: rgb(241, 241, 241);
+    background-color: blueviolet;
+}
+
+input,textarea {
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgb(213, 207, 230);
+    border-color: rgb(0, 110, 255);
+    color: white;
 }
 
 #btn {
-    padding: 20px;
-    border-radius: 5px;
-    font-size: 18px;
+    background-color: blueviolet;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: end;
 }
