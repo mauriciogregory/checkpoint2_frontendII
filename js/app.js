@@ -4,6 +4,7 @@ let conteudoDOLi = document.createTextNode("Novo Item")
 let li = document.createElement('li');
 let inputDataCriacao = document.querySelector("#datacriacao");
 let inputDataLimite = document.querySelector("#datalimite");
+let br = document.createElement("br");
 
 let btn = document.querySelector("#btn");
 
