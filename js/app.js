@@ -1,6 +1,6 @@
 let ul = document.querySelector('ul');
 // let conteudoDOLi = document.createTextNode("Novo item");
-let conteudoDOLi = document.createElement("<br>Novo Item")
+let conteudoDOLi = document.createTextNode("Novo Item")
 let li = document.createElement('li');
 let inputDataCriacao = document.querySelector("#datacriacao");
 let inputDataLimite = document.querySelector("#datalimite");
