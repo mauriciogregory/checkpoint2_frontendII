@@ -18,15 +18,15 @@
 
             <form class="formulario">
                 <label for="datacriacao">Data Criação:</label>
-                <input type="date" name="datacriacao" id="datacriacao" placeholder="Data de Criação">
+                <input type="date" name="datacriacao" id="datacriacao" placeholder="Data de Criação" required>
                 
                 <label for="datalimite">Data Limite:</label>
-                <input type="date" name="datalimite" id="datalimite">
+                <input type="date" name="datalimite" id="datalimite" required>
 
                 <label for="descricao">Descrição:</label>
-                <textarea name="descricao"  id="descricao" cols="30" rows="5" placeholder="Descrição..."></textarea>
+                <textarea name="descricao"  id="descricao" cols="30" rows="5" placeholder="Descrição..." required minlength="10"></textarea>
 
-                <input type="submit" name="Enviar" id="btn">
+                <input type="submit" name="Enviar" id="btn" required>
             </form>
         </section>
         <section class="uls">
