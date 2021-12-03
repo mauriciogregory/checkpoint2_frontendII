@@ -10,6 +10,10 @@ body {
     background: rgba(158, 152, 240, 0.333);
 }
 
+#home-link {
+    text-decoration: none;
+}
+
 .formulario {
     display: flex;
     flex-direction: column;
@@ -20,13 +24,17 @@ body {
     float: left;
 }
 
-.uls {
-    display: flex;
-    width: 49%;
+#lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
+
 }
 
 .forms {
-    width: 49%;
+    width: 50%;
 }
 
 h1 {
@@ -50,9 +58,48 @@ input,textarea {
     background-color: blueviolet;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 4fr)); */
+    margin: 20px;
+    background-color: rgba(79, 80, 90, 0.973);
+    text-decoration: none;
+    list-style: none;
+    border-radius: 5px;
+    padding: 15px;
+    border: 3px solid white;
+    color: white;
+    break-inside: avoid;
+}
+
+.card-done {
+    text-decoration: line-through;
+}
+
+.btnExcluir{
+    padding: 15px;    
+}
+
 footer {
     width: 100%;
     text-align: center;
-    align-items: center;
+    align-items: flex-end;
     justify-content: end;
+    justify-items: flex-end;
+}
+
+@media (max-width: 600px) {
+    section {
+        display: flex;
+        height: 100vh;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .forms {
+        
+    }
 }

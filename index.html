@@ -11,24 +11,27 @@
 
 <body>
     <header>
-        <h1>To Do List</h1>
+        <a id="home-link" href="./pages/consumo_api.html"><h1>To Do List</h1></a>
     </header>
     <main>
         <section class="forms">
 
             <form class="formulario">
                 <label for="datacriacao">Data Criação:</label>
-                <input type="date" name="datacriacao" id="datacriacao" placeholder="Data de Criação">
+                <input type="date" name="datacriacao" id="datacriacao" value=""readonly>
                 
                 <label for="datalimite">Data Limite:</label>
-                <input type="date" name="datalimite" id="datalimite">
+                <input type="date" name="datalimite" id="datalimite" required>
 
                 <label for="descricao">Descrição:</label>
-                <textarea name="descricao"  id="descricao" cols="30" rows="5" placeholder="Descrição..."></textarea>
+                <textarea name="descricao"  id="descricao" cols="30" rows="5" placeholder="Descrição..." ></textarea>
 
                 <input type="submit" name="Enviar" id="btn">
+
             </form>
         </section>
+
+
         <section class="uls">
             <ul id="lista">              
             </ul>
