@@ -1,31 +1,32 @@
 
 
 btn.addEventListener('click', function criarLista(evento) {
+
     evento.preventDefault();
 
-    const btnExcluir = document.createElement('button');
-const checkBOX = document.createElement('input');
-const texto_check = document.createElement('p');
-let ul = document.querySelector('ul');
-// let conteudoDOLi = document.createTextNode("Novo Item")
-let li = document.createElement('li');
-// let inputDataCriacao = document.querySelector("#datacriacao");
-let inputDataLimite = document.querySelector("#datalimite");
-let descricao = document.querySelector("#descricao");
-let br = document.createElement("br");
-let btn = document.querySelector("#btn");
+    var btnExcluir = document.createElement('button');
+    var checkBOX = document.createElement('input');
+    var texto_check = document.createElement('p');
+    var ul = document.querySelector('ul');
+    // let conteudoDOLi = document.createTextNode("Novo Item")
+    var li = document.createElement('li');
+    // let inputDataCriacao = document.querySelector("#datacriacao");
+    var inputDataLimite = document.querySelector("#datalimite");
+    var descricao = document.querySelector("#descricao");
+    var br = document.createElement("br");
+    var btn = document.querySelector("#btn");
 
-const agora = new Date;
-console.log(agora);
-// inputDataCriacao.innerHTML = agora.getDay;
-dia = agora.getDay() - 2;
-mes = agora.getMonth() + 1;
-ano = agora.getFullYear();
+    const agora = new Date;
+    console.log(agora);
+    // inputDataCriacao.innerHTML = agora.getDay;
+    dia = agora.getDay() - 2;
+    mes = agora.getMonth() + 1;
+    ano = agora.getFullYear();
 
 
 
-var inputDataCriacao = document.querySelector('input[type="date"]');
-inputDataCriacao.value = (ano + "-" + mes + "-0" + dia);
+    var inputDataCriacao = document.querySelector('input[type="date"]');
+    inputDataCriacao.value = (ano + "-" + mes + "-0" + dia);
 
     li.innerHTML = "Data de criação: " + inputDataCriacao.value + "<br>" + "Data Limite: " +
         inputDataLimite.value + "<br>" + descricao.value;
@@ -46,13 +47,14 @@ inputDataCriacao.value = (ano + "-" + mes + "-0" + dia);
 
     // li.appendChild(conteudoDOLi);
     ul.appendChild(li);
+    
+    btnExcluir.addEventListener('click', function (e) {
+        if (e.target.classList.contains('card')){
+            var card = closest(e.target, 'card');
+            card.parentNode.removeChild(card);
+        }
+    });
 
+// Removendo determinado elemento
 
 });
-// var listaElementos = document.getElementById("lista");
-// listaElementos.removeChild(listaElementos.lastElementChild);
-
-
-
-
-
