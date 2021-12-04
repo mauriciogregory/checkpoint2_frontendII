@@ -101,6 +101,10 @@ footer {
     align-items: flex-end;
     justify-content: end;
     justify-items: flex-end;
+    margin-bottom: 10px;
+    color:red;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 
