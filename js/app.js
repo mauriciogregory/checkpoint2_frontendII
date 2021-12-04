@@ -1,36 +1,51 @@
+const checkbox1 = document.getElementById ('checkbox');
 
+checkbox1.addEventListener('change', () => {
+    //mudar o tema do site
+document.body.classList.toggle('dark');
+});
 
 btn.addEventListener('click', function criarLista(evento) {
 
-    evento.preventDefault();
+  evento.preventDefault();
 
-    var btnExcluir = document.createElement('button');
-    var checkBOX = document.createElement('input');
-    var texto_check = document.createElement('p');
-    var ul = document.querySelector('ul');
-    // let conteudoDOLi = document.createTextNode("Novo Item")
-    var li = document.createElement('li');
-    // let inputDataCriacao = document.querySelector("#datacriacao");
-    var inputDataLimite = document.querySelector("#datalimite");
-    var descricao = document.querySelector("#descricao");
-    var br = document.createElement("br");
-    var btn = document.querySelector("#btn");
+  var btnExcluir = document.createElement('button');
+  var checkBOX = document.createElement('input');
+  var texto_check = document.createElement('p');
+  var ul = document.querySelector('ul');
+  var li = document.createElement('li');
+  var inputDataLimite = document.querySelector("#datalimite");
+  var descricao = document.querySelector("#descricao");
+  var br = document.createElement("br");
+  var btn = document.querySelector("#btn");
 
-    const agora = new Date;
-    console.log(agora);
-    // inputDataCriacao.innerHTML = agora.getDay;
-    dia = agora.getDay() - 2;
-    mes = agora.getMonth() + 1;
-    ano = agora.getFullYear();
+  // data de criação da lista
+  const agora = new Date;
+  console.log(agora);
+  dia = agora.getDay() - 2;
+  mes = agora.getMonth() + 1;
+  ano = agora.getFullYear();
 
+  var inputDataCriacao = document.querySelector('input[type="date"]');
+  inputDataCriacao.value = (ano + "-" + mes + "-0" + dia);
 
+  // data de término
+  console.log(inputDataLimite.value);
+  let validaData = inputDataLimite.value.split('-');
+  let anoTermino = validaData[0];
+  let mesTermino = validaData[1];
+  let diaTermino = validaData[2];
 
-    var inputDataCriacao = document.querySelector('input[type="date"]');
-    inputDataCriacao.value = (ano + "-" + mes + "-0" + dia);
-
+  console.log(mes);
+  if((anoTermino >= ano) && (mesTermino >= mes) && (diaTermino >= dia)){
+      // comparando string textarea validando
+  if (descricao.value.length <= 10) {
+    alert("O número de caracteres precisa ser maior que 10!")
+  } else {
     li.innerHTML = "Data de criação: " + inputDataCriacao.value + "<br>" + "Data Limite: " +
-        inputDataLimite.value + "<br>" + descricao.value;
+    inputDataLimite.value + "<br>" + descricao.value;
     li.classList.add('card');
+    li.setAttribute('id', 'card1')
 
     // botão excluir
     li.appendChild(btnExcluir);
@@ -39,22 +54,41 @@ btn.addEventListener('click', function criarLista(evento) {
     btnExcluir.innerHTML = "Excluir";
     btnExcluir.classList.add('btnExcluir')
 
-    // check box
+    // checkbox
     li.appendChild(checkBOX);
     checkBOX.setAttribute('type', 'checkbox');
+    checkBOX.setAttribute('id', 'checkbox');
+    checkBOX.setAttribute('unchecked', 'false');
     texto_check.innerHTML = 'Concluído!'
     li.appendChild(texto_check);
-
-    // li.appendChild(conteudoDOLi);
     ul.appendChild(li);
-    
-    btnExcluir.addEventListener('click', function (e) {
-        if (e.target.classList.contains('card')){
-            var card = closest(e.target, 'card');
-            card.parentNode.removeChild(card);
-        }
-    });
 
-// Removendo determinado elemento
+
+  checkBOX.addEventListener('click', () => {
+
+    if (document.getElementById('checkbox').checked) {
+      li.classList.add('card-done');
+    }
+    else if (document.getElementById('checkbox').unchecked) {
+
+      li.className.remove('card-done');
+    }
+  })
+  }
+        
+  } else {
+    alert("Escolha outra data!")
+  }
+
+
+
+  btnExcluir.addEventListener('click',
+    function _click() {
+      var confirmar = confirm("Quer excluir o item?");
+      if (confirmar == true) {
+        document.getElementById('card1').remove();
+      }
+
+    });
 
 });

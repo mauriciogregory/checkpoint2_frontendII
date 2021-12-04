@@ -10,9 +10,22 @@
 </head>
 
 <body>
-    <header>
-        <a id="home-link" href="./pages/consumo_api.html"><h1><< To Do List >></h1></a>
-    </header>
+    <div class="cabecalho">
+            <nav class="nav1">
+                <a id="home-link" href="index.html"><h2>To-Do List</h2></a>
+            </nav>
+            <nav class="nav2">
+                <a id="home-link" href="./pages/consumo_api.html"><h2>API</h2></a>
+            </nav>
+            <div>
+                    <input type="checkbox" class="checkbox" id="checkbox">
+                    <label for="checkbox" class="label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class= "ball"></div>
+                    </label>
+            </div>
+        </div>
     <main>
         <section class="forms">
 
@@ -23,8 +36,8 @@
                 <label for="datalimite">Data Limite:</label>
                 <input type="date" name="datalimite" id="datalimite" required>
 
-                <label for="descricao">Descrição:</label>
-                <textarea name="descricao"  id="descricao" cols="30" rows="5" placeholder="Descrição..." ></textarea>
+                <label for="descricao">Tarefa:</label>
+                <textarea name="descricao"  id="descricao" cols="30" rows="5" placeholder="Adicionar tarefa..."  minlength="10"></textarea>
 
                 <input type="submit" name="Enviar" id="btn">
 
