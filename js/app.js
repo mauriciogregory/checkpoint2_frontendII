@@ -39,7 +39,12 @@ btn.addEventListener('click', function criarLista(evento) {
   if ((anoTermino == ano) && ((mesTermino >= mes) && (diaTermino >= dia)) ) {
     // comparando string textarea validando
     if (descricao.value.length <= 10) {
-      alert("O número de caracteres precisa ser maior que 10!")
+      Swal.fire({
+        title: 'Ops!',
+        text: 'O número de caracteres precisa ser maior que 10!',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      });
     } else {
       li.innerHTML = "Data de criação: " + inputDataCriacao.value + "<br>" + "Data Limite: " +
         inputDataLimite.value + "<br>" + descricao.value;
@@ -77,7 +82,12 @@ btn.addEventListener('click', function criarLista(evento) {
   if (anoTermino > ano){
     // comparando string textarea validando
     if (descricao.value.length <= 10) {
-      alert("O número de caracteres precisa ser maior que 10!")
+      Swal.fire({
+        title: 'Ops!',
+        text: 'O número de caracteres precisa ser maior que 10!',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      });
     } else {
       li.innerHTML = "Data de criação: " + inputDataCriacao.value + "<br>" + "Data Limite: " +
         inputDataLimite.value + "<br>" + descricao.value;
@@ -113,7 +123,12 @@ btn.addEventListener('click', function criarLista(evento) {
     }
   }
   else {
-    alert("Escolha outra data!")
+    Swal.fire({
+      title: 'Ops!',
+      text: 'Escolha outra data!',
+      icon: 'error',
+      confirmButtonText: 'Ok'
+    });
   }
 
 
